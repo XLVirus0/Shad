@@ -1,15 +1,24 @@
+/* Load custom font */
+@font-face {
+    font-family: 'CustomFont'; /* You can give it any name */
+    src: url('fonts/font.ttf') format('truetype'); /* Path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     direction: rtl;
-    font-family: Arial, sans-serif;
+    font-family: 'CustomFont', Arial, sans-serif; /* Use custom font as default */
 }
 
 body {
     background-color: #121212;
     color: #fff;
+    font-family: 'CustomFont', Arial, sans-serif; /* Apply custom font to the body */
 }
 
 /* Main Container */
@@ -112,27 +121,52 @@ body {
 
 /* Bottom Banner Section */
 .bottom-banner {
-    background: url('images/icon-school.png') no-repeat center center; /* Set the image as background */
-    background-size: cover; /* Ensure the image covers the entire container */
-    padding: 60px 20px; /* Adjust padding to provide space for text */
+    background: url('images/icon-school.png') no-repeat center center;
+    background-size: cover;
+    padding: 60px 20px;
     margin: 20px;
     border-radius: 10px;
     text-align: center;
     color: #fff;
-    position: relative; /* Make sure it's positioned relative to control stacking order */
-    z-index: 1; /* Ensure this stays below the menu icons */
+    position: relative;
+    z-index: 1;
 }
 
+/* Banner Content */
 .banner-content {
-    position: relative; /* So that text can be positioned over the image */
-    z-index: 2; /* Ensure text appears above the background image */
+    position: relative;
+    z-index: 2;
 }
 
 .banner-content h2 {
     font-size: 24px;
     font-weight: bold;
-    z-index: 3; /* Ensure text stays on top of the background */
-    position: relative; /* To keep the text above the background */
+    z-index: 3;
+    position: relative;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust the padding and image size for smaller screens */
+    .bottom-banner {
+        padding: 30px 15px;
+        background-size: contain; /* Makes the background image fit within the container */
+    }
+
+    .banner-content h2 {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .bottom-banner {
+        padding: 20px 10px; /* Reduce padding even more */
+    }
+
+    .banner-content h2 {
+        font-size: 16px; /* Reduce font size even more */
+    }
 }
 
 /* Bottom Menu */
@@ -144,7 +178,7 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 10; /* Ensure the menu is above everything else */
+    z-index: 10;
 }
 
 .menu-item {
@@ -153,7 +187,7 @@ body {
 
 .menu-item img {
     width: 30px;
-    filter: brightness(0) invert(1); /* Converts icon to white */
+    filter: brightness(0) invert(1);
     transition: filter 0.3s ease;
 }
 
