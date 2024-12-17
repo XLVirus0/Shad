@@ -123,8 +123,6 @@ body {
 .bottom-banner {
     background: url('images/icon-school.png') no-repeat center center;
     background-size: cover;
-    width: 1800px;
-    padding: 60px 20px;
     margin: 20px;
     border-radius: 10px;
     text-align: center;
@@ -135,23 +133,10 @@ body {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 1080px) {
-    /* Adjust the padding and image size for smaller screens */
-    .bottom-banner {
-        width: 1033px; /* Set a fixed height for medium screens */
-        background-size: contain; /* Makes the background image fit within the container */
-    }
-
-    .banner-content h2 {
-        font-size: 18px; /* Reduce font size for smaller screens */
-    }
-}
-
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
     /* Adjust the padding and image size for smaller screens */
     .bottom-banner {
-        width: 700px; /* Set a fixed height for medium screens */
+        width: 250px; /* Set a fixed height for medium screens */
         background-size: contain; /* Makes the background image fit within the container */
     }
 
@@ -163,7 +148,7 @@ body {
 @media (max-width: 480px) {
     /* Further adjustments for very small screens */
     .bottom-banner {
-        width: 450px; /* Set a fixed height for medium screens */
+        width: 200px; /* Set a fixed height for medium screens */
         padding: 10px; /* Adjust padding for smaller screens */
     }
 
