@@ -80,41 +80,59 @@ body {
     background-color: #333;
     color: #fff;
     font-size: 14px;
+    padding-left: 35px; /* To create space for mic icon */
+    padding-right: 35px; /* To create space for search icon */
+}
+
+.mic-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url('images/mic-icon.png') no-repeat center;
+    cursor: pointer;
+}
+
+.mic-icon:hover {
+    filter: hue-rotate(150deg) brightness(1.1) saturate(100%) invert(38%) sepia(56%) saturate(160%) hue-rotate(360deg);
+    transition: filter 0.3s ease;
 }
 
 .search-icon {
     position: absolute;
-    right: 25px;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    background: url('../images/search-icon.png') no-repeat center;
+    background: url('images/search-icon.png') no-repeat center;
     width: 20px;
     height: 20px;
 }
 
 /* Bottom Banner Section */
 .bottom-banner {
-    background-color: #00c853;
-    padding: 15px;
+    background: url('images/icon-school.png') no-repeat center center; /* Set the image as background */
+    background-size: cover; /* Ensure the image covers the entire container */
+    padding: 60px 20px; /* Adjust padding to provide space for text */
     margin: 20px;
     border-radius: 10px;
     text-align: center;
     color: #fff;
+    position: relative; /* Make sure it's positioned relative to control stacking order */
+    z-index: 1; /* Ensure this stays below the menu icons */
 }
 
 .banner-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner-content img {
-    width: 50px;
-    margin-left: 10px;
+    position: relative; /* So that text can be positioned over the image */
+    z-index: 2; /* Ensure text appears above the background image */
 }
 
 .banner-content h2 {
-    font-size: 18px;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 3; /* Ensure text stays on top of the background */
+    position: relative; /* To keep the text above the background */
 }
 
 /* Bottom Menu */
@@ -126,6 +144,7 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 10; /* Ensure the menu is above everything else */
 }
 
 .menu-item {
