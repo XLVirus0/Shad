@@ -132,7 +132,55 @@ body {
     height: 300px; /* Set a fixed height for larger screens */
 }
 
+/* Bottom Banner Content */
+.bottom-banner .banner-content {
+    position: relative;
+    z-index: 2;
+}
 
+.bottom-banner .banner-content img {
+    width: 1080px; /* Adjust image size */
+    margin-bottom: 0px; /* Add some space between the icon and the title */
+}
+
+.bottom-banner .banner-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 3;
+    position: relative;
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .bottom-banner {
+        height: 200px; /* Smaller height on very small screens */
+        padding: 0px; /* Reduced padding */
+    }
+
+    .bottom-banner .banner-content img {
+        width: 280px; /* Smaller icon on smaller screens */
+    }
+
+    .bottom-banner .banner-content h2 {
+        font-size: 16px; /* Further reduced font size */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .bottom-banner {
+        height: 200px; /* Smaller height on very small screens */
+        padding: 0px; /* Reduced padding */
+    }
+
+    .bottom-banner .banner-content img {
+        width: 280px; /* Smaller icon on smaller screens */
+    }
+
+    .bottom-banner .banner-content h2 {
+        font-size: 16px; /* Further reduced font size */
+    }
+}
 
 /* Bottom Menu */
 .bottom-menu {
