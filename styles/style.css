@@ -136,7 +136,7 @@ body {
 @media (max-width: 768px) {
     /* Adjust the padding and image size for smaller screens */
     .bottom-banner {
-        width: 250px; /* Set a fixed height for medium screens */
+        margin: 10px;
         background-size: contain; /* Makes the background image fit within the container */
     }
 
@@ -148,8 +148,7 @@ body {
 @media (max-width: 480px) {
     /* Further adjustments for very small screens */
     .bottom-banner {
-        width: 200px; /* Set a fixed height for medium screens */
-        padding: 10px; /* Adjust padding for smaller screens */
+        margin: 10px;
     }
 
     .banner-content h2 {
